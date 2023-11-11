@@ -3,7 +3,7 @@ public class person implements Nameable {
     int age;
     int id;
     boolean parent_permission = true;
-    public person(int id, String name, boolean parent_permission, int age) {
+    public person(int id, String name, boolean parent_permission ,int age) {
         this.id = id;
         this.name = name;
         this.age = age;
