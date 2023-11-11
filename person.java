@@ -26,7 +26,7 @@ public class person implements Nameable {
         return age;
     }
     private boolean of_age(int age) {
-        if (age >= 18)
+        if (age > 18)
         {
             return true;
         }
@@ -40,7 +40,6 @@ public class person implements Nameable {
             return true;
         }
     }
-
 
     public String correctName() {
         return name;
