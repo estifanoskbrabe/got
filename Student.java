@@ -1,5 +1,10 @@
-public class Student extends person{
+public class Student extends Person{
     private String classroom;
+
+    public Student(String johnDoe, String classA) {
+        super();
+    }
+
     public String getClassroom() {
         return classroom;
     }
