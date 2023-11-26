@@ -1,8 +1,9 @@
-import java.util.ArrayList;
-import java.util.List;
+
+
+//this is the modified main class
 import java.util.Scanner;
 
-public class Main {
+public class Main{
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -1,3 +1,5 @@
+
+//this is the new app class
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
