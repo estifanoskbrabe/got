@@ -3,12 +3,9 @@ public class Rental {
     private Book book;
     private Person person;
 
-    public Rental(String date, Book book, Person person) {
-        this.date = date;
+    public Rental(Book book, Person person) {
         this.book = book;
         this.person = person;
-        book.addRental(this);
-        person.addRental(this);
     }
 
     public String getDate() {

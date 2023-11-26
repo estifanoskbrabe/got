@@ -1,33 +1,52 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        Person person = new Person();
-        System.out.println(person.correct_name());
+        Scanner scanner = new Scanner(System.in);
+        boolean quit = false;
+        App app = new App();
+        while (!quit) {
+            System.out.println("Choose an option:");
+            System.out.println("1. List all books");
+            System.out.println("2. List all people");
+            System.out.println("3. Create a person");
+            System.out.println("4. Create a book");
+            System.out.println("5. Create a rental");
+            System.out.println("6. List rentals for a person");
+            System.out.println("7. Quit");
 
-        CapitalizeDecorator capitalizedPerson = new CapitalizeDecorator(person);
-        System.out.println(capitalizedPerson.correct_name());
+            int option = scanner.nextInt();
+            scanner.nextLine();
 
-        TrimmerDecorator capitalizedTrimmedPerson = new TrimmerDecorator(capitalizedPerson);
-        System.out.println(capitalizedTrimmedPerson.correct_name());
-
-        Student student = new Student("john doe", "Class A");
-        System.out.println(student.correct_name());
-
-        CapitalizeDecorator capitalizedStudent = new CapitalizeDecorator(student);
-        System.out.println(capitalizedStudent.correct_name());
-
-        TrimmerDecorator capitalizedTrimmedStudent = new TrimmerDecorator(capitalizedStudent);
-        System.out.println(capitalizedTrimmedStudent.correct_name());
-
-        Teacher teacher = new Teacher("jane smith", "Mathematics");
-        System.out.println(teacher.correct_name());
-
-        CapitalizeDecorator capitalizedTeacher = new CapitalizeDecorator(teacher);
-        System.out.println(capitalizedTeacher.correct_name());
-
-        TrimmerDecorator capitalizedTrimmedTeacher = new TrimmerDecorator(capitalizedTeacher);
-        System.out.println(capitalizedTrimmedTeacher.correct_name());
+            switch (option) {
+                case 1:
+                    App.listAllBooks();
+                    break;
+                case 2:
+                    app.listAllPeople();
+                    break;
+                case 3:
+                    app.createPerson();
+                    break;
+                case 4:
+                    app.createBook();
+                    break;
+                case 5:
+                    app.createRental();
+                    break;
+                case 6:
+                    app.listRentalsForPerson();
+                    break;
+                case 7:
+                    quit = true;
+                    break;
+                default:
+                    System.out.println("Invalid option");
+            }
+        }
     }
-
 
 }

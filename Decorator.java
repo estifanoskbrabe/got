@@ -1,3 +1,4 @@
+//this decorator class
 class Decorator implements Nameable {
     protected Nameable nameable;
 
@@ -8,10 +9,5 @@ class Decorator implements Nameable {
     @Override
     public String correct_name() {
         return nameable.correct_name();
-    }
-
-    @Override
-    public String correctName() {
-        return null;
     }
 }

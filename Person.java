@@ -1,37 +1,53 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Person implements Nameable {
-    private String name;
-    private List<Rental> rentals;
+public class Person implements Nameable  {
+    int id;
 
-    public Person() {
+
+    String name;
+
+    int age;
+
+    boolean parent_permission;
+
+
+    public Person(String name, int age, boolean parent_permission) {
+        this.id = (int) (Math.random() * 1000000);
         this.name = name;
-        this.rentals = new ArrayList<>();
+        this.age = age;
+        this.parent_permission = parent_permission;
     }
 
-    public Person(int age, String name, boolean parentPermission, int id) {
+    public int getId() {
+        return id;
     }
 
     public String getName() {
         return name;
     }
 
-    public List<Rental> getRentals() {
-        return rentals;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void addRental(Rental rental) {
-        rentals.add(rental);
+    public int getAge() {
+        return age;
     }
 
-    @Override
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public boolean isParentPermission() {
+        return parent_permission;
+    }
+
+    public void setParentPermission(boolean parent_permission) {
+        this.parent_permission = parent_permission;
+    }
+
     public String correct_name() {
-        return null;
-    }
-
-    @Override
-    public String correctName() {
-        return null;
+        return name;
     }
 }

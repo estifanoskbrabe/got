@@ -4,11 +4,11 @@ public class Classroom {
     private String label;
     private List<Student> students;
 
-    //this is classroom class
     public Classroom(String label) {
         this.label = label;
         this.students = new ArrayList<>();
     }
+
 
     public String getLabel() {
         return label;
@@ -19,12 +19,11 @@ public class Classroom {
     }
 
     public List<Student> getStudents() {
-       return students;
-
+        return students;
     }
 
     public void addStudent(Student student) {
-        student.setClassroom(String.valueOf(this));
+        student.setClassroom(this);
         students.add(student);
     }
 }

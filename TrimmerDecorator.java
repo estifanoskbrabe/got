@@ -1,3 +1,4 @@
+//this is trimmerdecorator class
 class TrimmerDecorator extends Decorator {
     public TrimmerDecorator(Nameable nameable) {
         super(nameable);
@@ -10,5 +11,6 @@ class TrimmerDecorator extends Decorator {
             return name.substring(0, 10);
         }
         return name;
+
     }
 }
