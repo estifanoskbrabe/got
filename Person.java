@@ -1,48 +1,37 @@
-public class Person {
-    String name="unknown";
-    int age;
-    int id;
-    boolean parent_permission=true;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Person(String  name,int id,int age,boolean parent_permission){
-        this.name=name;
-        this.age=age;
-        this.id=id;
-        this.parent_permission=parent_permission;
+class Person implements Nameable {
+    private String name;
+    private List<Rental> rentals;
+
+    public Person() {
+        this.name = name;
+        this.rentals = new ArrayList<>();
+    }
+
+    public Person(int age, String name, boolean parentPermission, int id) {
     }
 
     public String getName() {
         return name;
     }
 
-    public int getAge() {
-        return age;
+    public List<Rental> getRentals() {
+        return rentals;
     }
 
-    public int getId() {
-        return id;
+    public void addRental(Rental rental) {
+        rentals.add(rental);
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public String correct_name() {
+        return null;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    @Override
+    public String correctName() {
+        return null;
     }
-    private boolean of_age() {
-        if (age>=18)
-            return true;
-        else{
-            return false;
-        }
-    }
-    public boolean can_use_services() {
-        if (of_age() || parent_permission)
-            return true;
-        else {
-            return false;
-        }
-    }
-
 }
